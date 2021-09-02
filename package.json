@@ -1,7 +1,7 @@
 {
-  "name": "vue-waterfall-jy",
-  "version": "1.0.13",
-  "description": "vue项目使用的瀑布流布局",
+  "name": "custom-plugin-jy",
+  "version": "1.0.0",
+  "description": "自定义插件",
   "main": "./src/index.js",
   "author": "yang <m15009010297@163.com>",
   "scripts": {
@@ -17,6 +17,10 @@
     "yjy",
     "test"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://gitee.com/y1501519413/vue-waterfall-jy"
+  },
   "dependencies": {
     "@babel/core": "^7.14.6",
     "dayjs": "^1.10.5",
