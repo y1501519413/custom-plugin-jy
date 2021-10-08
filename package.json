@@ -1,6 +1,6 @@
 {
   "name": "custom-plugin-jy",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "自定义插件",
   "main": "./src/index.js",
   "author": "yang <m15009010297@163.com>",
