@@ -2,10 +2,10 @@
   "name": "custom-plugin-jy",
   "version": "1.0.2",
   "description": "自定义插件",
-  "main": "./lib/bundle.umd.js",
-  "browser": "./lib/bundle.umd.js",
-  "jsdelivr": "./lib/bundle.umd.js",
-  "unpkg": "./lib/bundle.umd.js",
+  "main": "./lib/bundle.js",
+  "browser": "./lib/bundle.browser.js",
+  "jsdelivr": "./lib/bundle.jsdelivr.js",
+  "unpkg": "./lib/bundle.unpkg.js",
   "module": "./lib/bundle.esm.js",
   "author": "yang <m15009010297@163.com>",
   "scripts": {
@@ -24,14 +24,15 @@
   },
   "devDependencies": {
     "@babel/core": "^7.15.8",
-    "@babel/plugin-external-helpers": "^7.14.5",
     "@babel/preset-env": "^7.15.8",
     "dayjs": "^1.10.7",
+    "deepmerge": "^4.2.2",
     "rimraf": "^3.0.2",
     "rollup": "^2.52.2",
     "rollup-plugin-babel": "^4.4.0",
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-json": "^4.0.0",
-    "rollup-plugin-node-resolve": "^5.2.0"
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "the-answer": "^1.0.0"
   }
 }

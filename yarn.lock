@@ -265,13 +265,6 @@
     "@babel/helper-skip-transparent-expression-wrappers" "^7.15.4"
     "@babel/plugin-proposal-optional-chaining" "^7.14.5"
 
-"@babel/plugin-external-helpers@^7.14.5":
-  version "7.14.5"
-  resolved "https://registry.nlark.com/@babel/plugin-external-helpers/download/@babel/plugin-external-helpers-7.14.5.tgz#920baa1569a8df5d5710abc342c7b1ac8968ed76"
-  integrity sha1-kguqFWmo311XEKvDQsexrIlo7XY=
-  dependencies:
-    "@babel/helper-plugin-utils" "^7.14.5"
-
 "@babel/plugin-proposal-async-generator-functions@^7.15.8":
   version "7.15.8"
   resolved "https://registry.npmmirror.com/@babel/plugin-proposal-async-generator-functions/download/@babel/plugin-proposal-async-generator-functions-7.15.8.tgz?cache=0&sync_timestamp=1633553714195&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2F%40babel%2Fplugin-proposal-async-generator-functions%2Fdownload%2F%40babel%2Fplugin-proposal-async-generator-functions-7.15.8.tgz#a3100f785fab4357987c4223ab1b02b599048403"
@@ -1025,6 +1018,11 @@ debug@^4.1.0, debug@^4.1.1:
   dependencies:
     ms "2.1.2"
 
+deepmerge@^4.2.2:
+  version "4.2.2"
+  resolved "https://registry.yarnpkg.com/deepmerge/-/deepmerge-4.2.2.tgz#44d2ea3679b8f4d4ffba33f03d865fc1e7bf4955"
+  integrity sha512-FJ3UgI4gIl+PHZm53knsuSFpE+nESMr7M4v9QcgB7S63Kj/6WqMiFQJpBBYz1Pt+66bZpP3Q7Lye0Oo9MPKEdg==
+
 define-properties@^1.1.3:
   version "1.1.3"
   resolved "https://registry.nlark.com/define-properties/download/define-properties-1.1.3.tgz?cache=0&sync_timestamp=1618847174317&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fdefine-properties%2Fdownload%2Fdefine-properties-1.1.3.tgz#cf88da6cbee26fe6db7094f61d870cbd84cee9f1"
@@ -1393,7 +1391,7 @@ supports-color@^5.3.0:
 
 the-answer@^1.0.0:
   version "1.0.0"
-  resolved "https://registry.npm.taobao.org/the-answer/download/the-answer-1.0.0.tgz#6dbc4c9db469d4f437120b09e44700fc320f170b"
+  resolved "https://registry.yarnpkg.com/the-answer/-/the-answer-1.0.0.tgz#6dbc4c9db469d4f437120b09e44700fc320f170b"
   integrity sha1-bbxMnbRp1PQ3EgsJ5EcA/DIPFws=
 
 to-fast-properties@^2.0.0:
