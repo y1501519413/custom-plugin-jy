@@ -7,5 +7,5 @@
 ## 使用
 
 ```javascript
-import { openWeb, sum } from 'custom-plugin-jy'
+import custom from 'custom-plugin-jy'
 ```
