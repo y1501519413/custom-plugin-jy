@@ -6,11 +6,7 @@
   "author": "yang <m15009010297@163.com>",
   "scripts": {
     "clean": "rimraf ./lib/*",
-    "build": "npm run clean & rollup -c './scripts/rollup.config.js'",
-    "build:iife": "rollup ./src/index.js --format iife --name 'myBundle1' --file bundle.iife.js",
-    "build:cjs": "rollup ./src/index.js --format cjs --file bundle.cjs.js",
-    "build:umd": "rollup ./src/index.js --format umd --name 'myBundle2' --file bundle.umd.js",
-    "rollup:help": "rollup --help"
+    "build": "npm run clean && rollup -c './rollup.config.js'"
   },
   "license": "ISC",
   "keywords": [
@@ -22,13 +18,8 @@
     "url": "https://gitee.com/y1501519413/vue-waterfall-jy"
   },
   "dependencies": {
-    "@babel/core": "^7.14.6",
-    "dayjs": "^1.10.5",
     "rimraf": "^3.0.2",
     "rollup": "^2.52.2",
-    "rollup-plugin-babel": "^4.4.0",
-    "rollup-plugin-commonjs": "^10.1.0",
-    "rollup-plugin-json": "^4.0.0",
-    "rollup-plugin-node-resolve": "^5.2.0"
+    "rollup-plugin-json": "^4.0.0"
   }
 }

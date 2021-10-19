@@ -1,2 +1,5 @@
-export const openWeb = () => open('https://www.baidu.com')
-export const sum = (a, b) => a + b
+// src/main.js
+import foo from './foo.js';
+export default function () {
+  console.log(foo);
+}
