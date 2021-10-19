@@ -1,5 +1,6 @@
 // src/main.js
-import foo from './foo.js';
-export default function () {
-  console.log(foo);
+import answer from 'the-answer';
+
+export default () => {
+  console.log(`the answer is ${answer}`);
 }
