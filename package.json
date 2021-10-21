@@ -20,7 +20,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://gitee.com/y1501519413/vue-waterfall-jy"
+    "url": "https://gitee.com/y1501519413/custom-plugin-jy"
   },
   "devDependencies": {
     "@babel/core": "^7.15.8",
