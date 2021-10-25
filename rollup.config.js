@@ -23,7 +23,7 @@ export default {
     Object.assign({}, baseOutputConfig, { file: pkg.jsdelivr, format: 'iife' }),
     Object.assign({}, baseOutputConfig, { file: pkg.unpkg, format: 'iife' }),
     Object.assign({}, baseOutputConfig, { file: pkg.module, format: 'esm' }),
-    Object.assign({}, baseOutputConfig, { file: pkg.main, format: 'umd' })
+    Object.assign({}, baseOutputConfig, { file: pkg.main, format: 'cjs' })
   ],
   plugins: [
     json(),
