@@ -20,8 +20,8 @@ export default {
   input: './src/index.js',
 	output: [ // vue webpack mainFields 里默认browser优先 其它的main 浏览器直接引入支持umd(推荐)和iife
     Object.assign({}, baseOutputConfig, { file: pkg.browser, format: 'umd' }),
-    Object.assign({}, baseOutputConfig, { file: pkg.jsdelivr, format: 'umd' }),
-    Object.assign({}, baseOutputConfig, { file: pkg.unpkg, format: 'umd' }),
+    Object.assign({}, baseOutputConfig, { file: pkg.jsdelivr, format: 'iife' }),
+    Object.assign({}, baseOutputConfig, { file: pkg.unpkg, format: 'iife' }),
     Object.assign({}, baseOutputConfig, { file: pkg.module, format: 'esm' }),
     Object.assign({}, baseOutputConfig, { file: pkg.main, format: 'umd' })
   ],
