@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+    "outDir": "./lib",
+    "forceConsistentCasingInFileNames": true, // 禁止对同一个文件的不一致的引用
+    "strict": true,
+    "noImplicitOverride": true, // 禁用隐式覆盖，
+    "noPropertyAccessFromIndexSignature": true, // 不可使用dot访问不存在的属性
+    "noImplicitReturns": true, // 确保函数有返回值
+    "noEmitOnError": true, // 当源文件编译出错时，不输出编译结果
+    "strictNullChecks": false, // 对null和undefined严格检查
+    "noFallthroughCasesInSwitch": true, // 不可有为空的Switch片段
+    "sourceMap": false, // 生成相应的map文件
+    "declaration": false, // 生成.d.ts文件
+    "downlevelIteration": true, // 低水平迭代，将新语法降级，for of=>for
+    "experimentalDecorators": true, // 启用实验性的es装饰器
+    "moduleResolution": "node", // 模块解析策略
+    "importHelpers": true, // 协助引入，设置为false，...会自行生成一个，设置为true直接从tslib引入
+    "skipLibCheck": true, // 忽略所有声明文件
+    "esModuleInterop": true, // es模块互合作，解决CommonJS/AMD/UMD被视为ES6模块的问题
+    "target": "es2020", // 将会编译为的es版本
+    "module": "es2020", // 指定生成哪个模块系统代码
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.d.ts",
+    "*.config.js",
+    "types/**/*.d.ts"
+  ]
+}

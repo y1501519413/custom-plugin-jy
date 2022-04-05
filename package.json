@@ -1,19 +1,32 @@
 {
   "name": "custom-plugin-jy",
-  "version": "1.1.2",
+  "version": "2.0.0",
   "description": "自定义插件",
+  "type": "module",
+  "engines": {
+    "node": ">=14.16"
+  },
   "main": "./lib/bundle.js",
-  "browser": "./lib/bundle.browser.js",
   "jsdelivr": "./lib/bundle.jsdelivr.js",
   "unpkg": "./lib/bundle.unpkg.js",
   "module": "./lib/bundle.esm.js",
   "author": "yang <m15009010297@163.com>",
   "scripts": {
+    "start": "run-p dev",
     "clean": "rimraf ./lib/*",
     "build": "npm run clean && rollup -c './rollup.config.js'",
-    "deploy": "npm publish"
+    "test": "node --experimental-vm-modules node_modules/.bin/jest",
+    "eslint": "eslint 'src/**/*.{js,ts}' --fix",
+    "prerelease": "run-s test",
+    "release": "run-s build publish",
+    "cz": "git add . && cz",
+    "log": "conventional-changelog -p angular -i CHANGELOG.md -s -r 1",
+    "tsc": "run-s clean && tsc"
   },
-  "license": "ISC",
+  "files": [
+    "src"
+  ],
+  "license": "MIT",
   "keywords": [
     "yjy",
     "test"
@@ -25,14 +38,36 @@
   "devDependencies": {
     "@babel/core": "^7.15.8",
     "@babel/preset-env": "^7.15.8",
+    "@commitlint/cli": "^16.2.3",
+    "@commitlint/config-conventional": "^16.2.1",
+    "@typescript-eslint/eslint-plugin": "^5.17.0",
+    "@typescript-eslint/parser": "^5.17.0",
+    "conventional-changelog-cli": "^2.2.2",
+    "cz-conventional-changelog": "^3.3.0",
     "dayjs": "^1.10.7",
-    "deepmerge": "^4.2.2",
+    "eslint": "^8.12.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.3.7",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.5.1",
     "rimraf": "^3.0.2",
     "rollup": "^2.52.2",
     "rollup-plugin-babel": "^4.4.0",
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-json": "^4.0.0",
     "rollup-plugin-node-resolve": "^5.2.0",
-    "the-answer": "^1.0.0"
+    "typescript": "^4.6.3"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "lint-staged": {
+    "*.{js,ts}": [
+      "npm run eslint"
+    ]
   }
 }

@@ -4,6 +4,7 @@ import commonjs from 'rollup-plugin-commonjs'
 import babel from 'rollup-plugin-babel'
 import dayjs from 'dayjs'
 import pkg from './package.json'
+import typescript from 'rollup-plugin-typescript2'
 
 const banner = `/**
  * ${pkg.description}
@@ -14,23 +15,22 @@ const banner = `/**
 const baseOutputConfig = {
   name: 'custom',
   banner,
-  file: pkg.main
+  file: pkg.main,
 }
 export default {
-  input: './src/index.js',
-	output: [ // vue webpack mainFields 里默认browser优先 其它的main 浏览器直接引入支持umd(推荐)和iife
-    Object.assign({}, baseOutputConfig, { file: pkg.browser, format: 'umd' }),
+  input: './src/index.ts',
+  output: [
     Object.assign({}, baseOutputConfig, { file: pkg.jsdelivr, format: 'iife' }),
     Object.assign({}, baseOutputConfig, { file: pkg.unpkg, format: 'iife' }),
     Object.assign({}, baseOutputConfig, { file: pkg.module, format: 'esm' }),
-    Object.assign({}, baseOutputConfig, { file: pkg.main, format: 'cjs' })
+    Object.assign({}, baseOutputConfig, { file: pkg.main, format: 'cjs' }),
   ],
   plugins: [
     json(),
     resolve(),
     babel({
-      exclude: 'node_modules/**' // 只编译我们的源代码
+      exclude: 'node_modules/**', // 只编译我们的源代码
     }),
-    commonjs()
-  ]
+    commonjs(),
+  ],
 }
