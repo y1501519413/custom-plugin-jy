@@ -1,7 +1,6 @@
 {
   "compilerOptions": {
     "baseUrl": "./",
-    "outDir": "./lib",
     "forceConsistentCasingInFileNames": true, // 禁止对同一个文件的不一致的引用
     "strict": true,
     "noImplicitOverride": true, // 禁用隐式覆盖，

@@ -1,6 +1,6 @@
 {
   "name": "custom-plugin-jy",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "自定义插件",
   "type": "module",
   "engines": {
@@ -12,19 +12,17 @@
   "module": "./lib/bundle.esm.js",
   "author": "yang <m15009010297@163.com>",
   "scripts": {
-    "start": "run-p dev",
     "clean": "rimraf ./lib/*",
-    "build": "npm run clean && rollup -c './rollup.config.js'",
-    "test": "node --experimental-vm-modules node_modules/.bin/jest",
     "eslint": "eslint 'src/**/*.{js,ts}' --fix",
-    "prerelease": "run-s test",
-    "release": "run-s build publish",
-    "cz": "git add . && cz",
     "log": "conventional-changelog -p angular -i CHANGELOG.md -s -r 1",
-    "tsc": "run-s clean && tsc"
+    "test": "node node_modules/.bin/jest",
+    "build": "npm run clean && rollup -c './rollup.config.js'",
+    "prerelease": "run-s test",
+    "release": "run-s build && npm publish",
+    "cz": "git add . && cz"
   },
   "files": [
-    "src"
+    "lib"
   ],
   "license": "MIT",
   "keywords": [
@@ -58,6 +56,8 @@
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-json": "^4.0.0",
     "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-typescript2": "^0.31.2",
+    "tslib": "^2.3.1",
     "typescript": "^4.6.3"
   },
   "config": {

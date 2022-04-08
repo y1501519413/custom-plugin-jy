@@ -1,6 +1,7 @@
 import { ErrorCode } from './enums/index'
-console.log('ErrorCode', ErrorCode.NotFoundError)
-function test<T, U>(arg: T, age: U): T {
+console.log('ErrorCode', ErrorCode)
+console.log('ErrorCode.NotFoundError', ErrorCode.NotFoundError)
+export const test = <T, U>(arg: T, age: U): T => {
   console.log('age', age)
   return arg
 }
