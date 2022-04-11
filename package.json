@@ -1,20 +1,21 @@
 {
   "name": "custom-plugin-jy",
-  "version": "2.6.0",
+  "version": "2.7.0",
   "description": "自定义插件",
   "engines": {
     "node": ">=14.16"
   },
-  "main": "./lib/bundle.js",
-  "jsdelivr": "./lib/bundle.jsdelivr.js",
-  "unpkg": "./lib/bundle.unpkg.js",
-  "module": "./lib/bundle.mjs",
+  "type": "module",
+  "main": "./lib/index.cjs",
+  "jsdelivr": "./lib/index.jsdelivr.js",
+  "unpkg": "./lib/index.unpkg.js",
+  "module": "./lib/index.js",
   "exports": {
     "node": {
-      "import": "./lib/bundle.mjs",
-      "require": "./lib/bundle.js"
+      "import": "./lib/index.js",
+      "require": "./lib/index.cjs"
     },
-    "default": "./lib/bundle.mjs"
+    "default": "./lib/index.js"
   },
   "author": "yang <m15009010297@163.com>",
   "scripts": {
