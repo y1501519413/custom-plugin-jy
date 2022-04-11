@@ -1,17 +1,11 @@
 import { ErrorCode } from './enums/index'
 console.log('ErrorCode', ErrorCode)
 console.log('ErrorCode.NotFoundError', ErrorCode.NotFoundError)
-export const test = <T, U>(arg: T, age: U): T => {
-  console.log('age', age)
-  return arg
-}
-const user1: User = {
-  name: '小白',
-  age: 20,
-  birthday: new Date(),
-}
-test(user1, 11)
 
-export default (answer: number) => {
-  console.log(`the answer is ${answer * 2}`)
+export default (answer: number | string) => {
+  if (typeof answer === 'string') {
+    ErrorCode.NotFoundError || undefined
+  } else {
+    console.log(`the answer is ${answer * 2}`)
+  }
 }
