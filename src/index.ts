@@ -1,4 +1,3 @@
-import { ErrorCode } from './enums/index'
 console.log('ErrorCode', ErrorCode)
 console.log('ErrorCode.NotFoundError', ErrorCode.NotFoundError)
 const sum = (answer: number | string) => {

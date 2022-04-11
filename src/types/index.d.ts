@@ -15,3 +15,13 @@ enum DEVICE_LEVELS {
   MIDDLE = 5, // 中端机型
   HIGH = 10, // 高端机型
 }
+/**
+ * 错误码
+ */
+enum ErrorCode {
+  Success = 200,
+  NotFoundError = 404,
+  ServerError = 500,
+  UnauthorizedError = 401,
+  OtherError = -1,
+}
