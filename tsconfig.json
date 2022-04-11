@@ -22,8 +22,7 @@
   },
   "include": [
     "src/**/*.ts",
-    "src/**/*.d.ts",
+    "types/**/*.d.ts",
     "*.config.js",
-    "types/**/*.d.ts"
   ]
 }
