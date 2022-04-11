@@ -2,14 +2,20 @@
   "name": "custom-plugin-jy",
   "version": "2.4.0",
   "description": "自定义插件",
-  "type": "module",
   "engines": {
     "node": ">=14.16"
   },
   "main": "./lib/bundle.js",
   "jsdelivr": "./lib/bundle.jsdelivr.js",
   "unpkg": "./lib/bundle.unpkg.js",
-  "module": "./lib/bundle.esm.js",
+  "module": "./lib/bundle.mjs",
+  "exports": {
+    "node": {
+      "import": "./lib/bundle.mjs",
+      "require": "./lib/bundle.js"
+    },
+    "default": "./lib/bundle.mjs"
+  },
   "author": "yang <m15009010297@163.com>",
   "scripts": {
     "clean": "rimraf ./lib/*",
