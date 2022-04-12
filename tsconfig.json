@@ -17,11 +17,12 @@
     "importHelpers": true, // 协助引入，设置为false，...会自行生成一个，设置为true直接从tslib引入
     "skipLibCheck": true, // 忽略所有声明文件
     "esModuleInterop": true, // es模块互合作，解决CommonJS/AMD/UMD被视为ES6模块的问题
-    "target": "es2020", // 将会编译为的es版本
+    "target": "es2020", // 指定使用的ES版本
     "module": "es2020", // 指定生成哪个模块系统代码
   },
   "include": [
     "src/**/*.ts",
+    "__tests__",
     "*.config.js",
   ]
 }
