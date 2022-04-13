@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "baseUrl": "./",
+    "outDir": "./lib",
     "forceConsistentCasingInFileNames": true, // 禁止对同一个文件的不一致的引用
     "strict": true,
     "noImplicitOverride": true, // 禁用隐式覆盖，
@@ -20,9 +21,5 @@
     "target": "es2020", // 指定使用的ES版本
     "module": "es2020", // 指定生成哪个模块系统代码
   },
-  "include": [
-    "src/**/*.ts",
-    "__tests__",
-    "*.config.js",
-  ]
+  "include": ["src"]
 }

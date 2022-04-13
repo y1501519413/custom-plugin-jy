@@ -2,3 +2,5 @@ dist
 src/js
 src/puppeteer
 src/**/*.d.ts
+__tests__
+*.config.js

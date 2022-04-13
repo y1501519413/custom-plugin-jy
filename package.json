@@ -24,6 +24,7 @@
     "log": "conventional-changelog -p angular -i CHANGELOG.md -s -r 1",
     "test": "jest",
     "build": "npm run clean && rollup -c './rollup.config.js'",
+    "tsc": "npm run clean && tsc",
     "prerelease": "run-s test",
     "release": "run-s build && npm publish",
     "cz": "git add . && cz"
