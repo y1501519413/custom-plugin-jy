@@ -11,7 +11,8 @@
     "strictNullChecks": false, // 对null和undefined严格检查
     "noFallthroughCasesInSwitch": true, // 不可有为空的Switch片段
     "sourceMap": false, // 生成相应的map文件
-    "declaration": false, // 生成.d.ts文件
+    "allowJs": true,
+    "declaration": true, // 生成.d.ts文件
     "downlevelIteration": true, // 低水平迭代，将新语法降级，for of=>for
     "experimentalDecorators": true, // 启用实验性的es装饰器
     "moduleResolution": "node", // 模块解析策略

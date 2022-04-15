@@ -1,12 +1,9 @@
-console.log('ErrorCode.NotFoundError', ErrorCode.NotFoundError)
-const sum = (answer: number | string) => {
-  if (typeof answer === 'string') {
-    ErrorCode.NotFoundError || undefined
-  } else {
-    console.log(`the answer is ${answer * 2}`)
-  }
+import axios from 'axios'
+const sum = async (answer: number) => {
+  const { data } = await axios.get('http://10.1.31.113:3865/get_json')
+  console.log('data', data)
+  return answer * answer
 }
-
 console.log('ErrorCode', ErrorCode.Success)
 
 export default sum

@@ -1,4 +1,4 @@
-import sum from './__fixtures__/sum'
-test('adds 1 + 2 to equal 3', () => {
-  expect(sum(1, 2)).toBe(3)
+import sum from '../lib/index'
+test('adds 2 to equal 3', () => {
+  expect(sum(2)).toBe(4)
 })

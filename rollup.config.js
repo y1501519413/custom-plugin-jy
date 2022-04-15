@@ -1,7 +1,9 @@
-import json from 'rollup-plugin-json'
-import resolve from 'rollup-plugin-node-resolve'
-import commonjs from 'rollup-plugin-commonjs'
 import dayjs from 'dayjs'
+import filesize from 'rollup-plugin-filesize' // 展示打包后的信息
+import json from '@rollup/plugin-json' // 可在代码中引入json
+// import { nodeResolve } from '@rollup/plugin-node-resolve' // 将源码与依赖合并
+import commonjs from '@rollup/plugin-commonjs' // 支持es6+和commonjs
+import { terser } from 'rollup-plugin-terser' // 简化，压缩
 import pkg from './package.json'
 import typescript from 'rollup-plugin-typescript2'
 
@@ -11,11 +13,15 @@ const banner = `/**
  * @author: ${pkg.author}
  * @date: ${dayjs().format('YYYY-MM-DD')}
  **/`
+const dependencies = Object.keys(pkg.dependencies)
 const baseOutputConfig = {
   name: 'custom',
   banner,
-  file: pkg.main,
-  exports: 'auto',
+  exports: 'named',
+  globals: dependencies.reduce((prev, item) => {
+    prev[item] = item
+    return prev
+  }, {}),
 }
 export default {
   input: './src/index.ts',
@@ -25,5 +31,13 @@ export default {
     Object.assign({}, baseOutputConfig, { file: pkg.module, format: 'esm' }),
     Object.assign({}, baseOutputConfig, { file: pkg.main, format: 'cjs' }),
   ],
-  plugins: [json(), commonjs(), resolve(), typescript()],
+  external: dependencies,
+  plugins: [
+    // nodeResolve(),
+    commonjs(),
+    json(),
+    typescript(),
+    filesize(),
+    terser(),
+  ],
 }
