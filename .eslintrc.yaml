@@ -21,4 +21,5 @@ rules:
     - error
     - singleQuote: true
       semi: false
+      arrowParens: avoid
     - usePrettierrc: false

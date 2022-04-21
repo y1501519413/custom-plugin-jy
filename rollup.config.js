@@ -26,10 +26,11 @@ const baseOutputConfig = {
 export default {
   input: './src/index.ts',
   output: [
+    Object.assign({}, baseOutputConfig, { file: pkg.main, format: 'cjs' }),
+    Object.assign({}, baseOutputConfig, { file: pkg.module, format: 'esm' }),
+    Object.assign({}, baseOutputConfig, { file: pkg.browser, format: 'iife' }),
     Object.assign({}, baseOutputConfig, { file: pkg.jsdelivr, format: 'iife' }),
     Object.assign({}, baseOutputConfig, { file: pkg.unpkg, format: 'iife' }),
-    Object.assign({}, baseOutputConfig, { file: pkg.module, format: 'esm' }),
-    Object.assign({}, baseOutputConfig, { file: pkg.main, format: 'cjs' }),
   ],
   external: dependencies,
   plugins: [
