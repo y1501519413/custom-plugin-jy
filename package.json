@@ -20,7 +20,7 @@
   "author": "yang <m15009010297@163.com>",
   "scripts": {
     "clean": "rimraf ./lib/*",
-    "eslint": "eslint 'src/**/*.{js,ts}' --fix",
+    "eslint": "eslint --fix",
     "log": "conventional-changelog -p angular -i CHANGELOG.md -s -r 1",
     "test": "jest",
     "build": "npm run clean && rollup -c './rollup.config.js'",
