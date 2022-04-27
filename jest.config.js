@@ -64,6 +64,7 @@ export default {
 
   // A set of global variables that need to be available in all test environments
   globals: {
+    // 允许ts-jest转化代码为esm格式，默认为false，采用commonjs
     'ts-jest': {
       useESM: true,
     },
