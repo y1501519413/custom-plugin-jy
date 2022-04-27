@@ -1,3 +1,3 @@
-src
+# 发布需忽略的文件（夹），有较多配置文件，使用package.json的files字段更合适
 *.config.js
 .*.yaml

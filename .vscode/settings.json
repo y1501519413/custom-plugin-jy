@@ -1,14 +1,8 @@
 {
-  "liveServer.settings.port": 5501,
   "editor.codeActionsOnSave": {
     "source.fixAll": true
   },
-  "[javascript]": {
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
-  },
-  "[typescript]": {
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
-  },
+  "eslint.validate": ["javascript", "typescript"],
   "typescript.tsdk": "./node_modules/typescript/lib",
   "[html]": {
     "editor.formatOnSave": true,
