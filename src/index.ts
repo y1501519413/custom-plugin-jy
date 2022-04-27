@@ -5,6 +5,7 @@ const sum = async (answer: number) => {
   console.log('data', data)
   return answer * answer
 }
+console.log('sum', sum)
 console.log('ErrorCode', ErrorCode.Success)
 const user1: User1 = {
   name: 'lilith',
@@ -103,4 +104,7 @@ export const BOOK_SUBJECT_GUIDE_BOARD: Record<BookSubject, GuideBoardItem> = {
       '//cdn.hhdd.com/frontend/as/i/9deaf8b2-a987-51b4-8f2d-94f84d954ad3.png',
   },
 }
-export default sum
+const sum2 = (answer: number) => {
+  return answer * answer
+}
+export default sum2

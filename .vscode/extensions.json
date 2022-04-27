@@ -1,0 +1,10 @@
+{
+  "recommendations": [
+    "dbaeumer.vscode-eslint",
+    "EditorConfig.EditorConfig",
+    "esbenp.prettier-vscode",
+    "DavidAnson.vscode-markdownlint",
+    "ms-vscode.vscode-typescript-next",
+    "Orta.vscode-jest"
+  ]
+}

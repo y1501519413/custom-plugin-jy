@@ -6,15 +6,17 @@
     "node": ">=14.13.0"
   },
   "type": "module",
-  "main": "./lib/index.js",
+  "main": "./lib/index.cjs",
   "module": "./lib/index.js",
   "browser": "./lib/index.iife.js",
   "jsdelivr": "./lib/index.jsdelivr.js",
   "unpkg": "./lib/index.unpkg.js",
   "exports": {
-    "require": "./lib/index.cjs.js",
-    "import": "./lib/index.esm.js",
-    "default": "./lib/index.esm.js"
+    "node": {
+      "require": "./lib/index.cjs",
+      "import": "./lib/index.js"
+    },
+    "default": "./lib/index.js"
   },
   "types": "./lib/index.d.ts",
   "author": "yang <m15009010297@163.com>",
