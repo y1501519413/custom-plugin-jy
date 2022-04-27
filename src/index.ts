@@ -77,12 +77,6 @@ enum BookSubject {
   BUILD_PERSONALITY = 'build-personality',
   // 提升想象力
   IMAGINE = 'imagine',
-  // 满足好奇心
-  QUIZ = 'quiz',
-  // 赏中华经典
-  CULTURE = 'culture',
-  // 其他
-  OTHER = 'other',
 }
 type GuideBoardItem = {
   type: BookSubject // 绘本主题
@@ -93,6 +87,18 @@ export const BOOK_SUBJECT_GUIDE_BOARD: Record<BookSubject, GuideBoardItem> = {
   [BookSubject.GOOD_HABIT]: {
     type: BookSubject.GOOD_HABIT,
     title: '养成好习惯',
+    imageUrl:
+      '//cdn.hhdd.com/frontend/as/i/9deaf8b2-a987-51b4-8f2d-94f84d954ad3.png',
+  },
+  [BookSubject.BUILD_PERSONALITY]: {
+    type: BookSubject.BUILD_PERSONALITY,
+    title: '塑造好品格',
+    imageUrl:
+      '//cdn.hhdd.com/frontend/as/i/9deaf8b2-a987-51b4-8f2d-94f84d954ad3.png',
+  },
+  [BookSubject.IMAGINE]: {
+    type: BookSubject.IMAGINE,
+    title: '提升想象力',
     imageUrl:
       '//cdn.hhdd.com/frontend/as/i/9deaf8b2-a987-51b4-8f2d-94f84d954ad3.png',
   },

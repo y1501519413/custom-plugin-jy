@@ -29,9 +29,6 @@
     "release": "run-s build && npm publish",
     "cz": "git add . && cz"
   },
-  "files": [
-    "lib"
-  ],
   "license": "MIT",
   "keywords": [
     "yjy",
