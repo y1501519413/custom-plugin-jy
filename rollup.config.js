@@ -15,13 +15,9 @@ const banner = `/**
  **/`
 const dependencies = Object.keys(pkg.dependencies)
 const baseOutputConfig = {
-  name: 'custom',
+  name: 'CustomPlugin',
   banner,
   exports: 'named',
-  globals: dependencies.reduce((prev, item) => {
-    prev[item] = item
-    return prev
-  }, {}),
 }
 export default {
   input: './src/index.ts',
