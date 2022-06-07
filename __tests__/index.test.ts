@@ -1,5 +1,7 @@
-import sum from '../lib/index'
-// import sum from './__fixtures__/sum'
-test('adds 2 to equal 3', () => {
-  expect(sum(2)).toBe(4)
+import { sum, quadrature  } from '../lib/index'
+test('sum [2, 3] to equal 5', () => {
+  expect(sum([2, 3])).toBe(5)
+})
+test('quadrature [2, 3] to equal 6', () => {
+  expect(quadrature([2, 3])).toBe(6)
 })
